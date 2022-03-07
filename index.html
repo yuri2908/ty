@@ -1,4 +1,4 @@
-<!DOCTYPE html><html ng-app="Teleset" class="ng-scope" data-scrapbook-source="https://desainkreasi.com"><head><style>@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+<!DOCTYPE html><html ng-app="Teleset" class="ng-scope" data-scrapbook-source="https://desainkreasi.com" lang="en"><head><style>@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -3285,14 +3285,15 @@ button.c2157 svg {
     <!--<img src="/frontend/img/hero.png" alt="" class="hero">-->
   </div><div><section class="plan-description">
     <!-- ngInclude: '/api/page_parts/fullpage-index?plan' --><h1 ng-include="'/api/page_parts/fullpage-index?plan'" class="ng-scope" style="font-size:64px;">Web Developer<br /><span class="yellow-text ng-scope" style="font-size:41px;">Desain Kreasi</span><sup class="ng-scope"> </sup>
-<p class="purple-text ng-scope">이태용</p>
+<span class="purple-text ng-scope" style="font-size:34px;">이태용</span>
 </h1>
-      <audio autoplay="" controls="" loop="" id="playAudio" style="margin-left:-10px;">
-<source src="https://kliendk.my.id/assets/images/darkclouds.mp3" type="audio/mpeg">
-</audio>
     <!-- <h1>Интернет <nobr>1 /с</nobr> за <span class="yellow-text">400</span><sup> Руб</sup></h1> -->
-    <a ui-sref="main.about-plan" class="btn btn-primary btn-purple text-yellow" href="https://desainkreasi.com">Read More</a>
+    <a ui-sref="main.about-plan" class="btn btn-primary btn-purple text-yellow" href="https://desainkreasi.com" style="margin-bottom:30px;">Read More</a><br />
+	  	<audio autoplay="yes" controls="yes" loop="yes" id="playAudio">
+<source src="darkclouds.mp3" type="audio/mpeg">
+</audio><br />
   </section></div></slick>
+
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="30px" class="fig fig-purple fig-cross-1 ng-scope">
   <defs>
     <style>.a-c {
@@ -4227,5 +4228,14 @@ button.c2157 svg {
     
     <noscript><iframe src="index_1.html" style="display: none; visibility: hidden" width="0" height="0"></iframe></noscript>
   
-
+  <script>
+$(window).scroll(function() {
+    var height = $(document).height() - $(window).height();
+var scroll = $(window).scrollTop();  
+      var audioElm = $('#playAudio').get(0);
+    audioElm.play();
+    audioElm.volume = 1 - $(window).scrollTop()/height;
+    console.log(audioElm.volume);
+});
+</script>
 </body></html>

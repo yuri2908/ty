@@ -11,17 +11,25 @@
     <link href="favicon.png" rel="icon" type="image/png">
     <link href="style.css" rel="stylesheet">
   <style>
+  body,html {
+    background-color: rgb(171, 22, 94);
+		margin: 0 0 0 0;
+		padding: 0 0 0 0;
+}
+
+#particles-snow {
+	 position:fixed;
+   width: 100%;
+   height: 100%;
+}
+
   @media only screen and (max-width: 480px) {
   h1.ng-scope {
     display:none !important;
   }
   audio {
   max-width:180px !important;
-  margin-top:150px !important;
   }
-img.hero2 {
-	margin-right:50px;
-	  }	  
 }
   ._33001 {
   width: 100%;
@@ -3119,6 +3127,126 @@ button.c2157 svg {
 </style></head>
   <body ng-controller="MainCtrl as main" ng-class="[$state.current.data.bodyClassName, main.bodyClassNames.join(' '), {'show-four-blocks-section': main.showFourBlocksSection, 'show-login-popup': main.showLogin, 'show-hamburger': main.showHamburger, 'show-connect-form': showConnectForm}]" class="ng-scope homepage-body loaded initial-animation">
     <!-- uiView: --><div class="inner-page-wrap ng-scope" ui-view=""><div class="fullpage-wrap ng-scope">
+	<div id="particles-snow">
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+      <script id="rendered-js">
+particlesJS("particles-snow", {
+  "particles": {
+    "number": {
+      "value": 250,
+      "density": {
+        "enable": false,
+        "value_area": 800 } },
+
+
+    "color": {
+      "value": "#ffffff" },
+
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000" },
+
+      "polygon": {
+        "nb_sides": 36 },
+
+      "image": {
+        "src": "",
+        "width": 1000,
+        "height": 1000 } },
+
+
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 0.5,
+        "opacity_min": 1,
+        "sync": false } },
+
+
+    "size": {
+      "value": 3.2,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 80,
+        "size_min": 0.1,
+        "sync": false } },
+
+
+    "line_linked": {
+      "enable": false,
+      "distance": 100,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 2 },
+
+    "move": {
+      "enable": true,
+      "speed": 11,
+      "direction": "bottom",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 800,
+        "rotateY": 1200 } } },
+
+
+
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": false,
+        "mode": "repulse" },
+
+      "onclick": {
+        "enable": false,
+        "mode": "push" },
+
+      "resize": true },
+
+    "modes": {
+      "grab": {
+        "distance": 200,
+        "line_linked": {
+          "opacity": 1 } },
+
+
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3 },
+
+      "repulse": {
+        "distance": 71,
+        "duration": 0.4 },
+
+      "push": {
+        "particles_nb": 4 },
+
+      "remove": {
+        "particles_nb": 2 } } },
+
+
+
+  "retina_detect": true });
+//# sourceURL=pen.js
+    </script><canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="1920" height="191"></canvas>
+</div>
+	
+	
+	
   <header class="header">
   <div class="wrapper">
     <a ui-sref="index" class="logo" href="">
@@ -3217,7 +3345,7 @@ button.c2157 svg {
 
   <header class="mobile-header" headroom="" scroller=".main-menu-item">
   <div class="wrapper">
-    <a ui-sref="index" class="logo" href="https://yuri2908.github.io/ty/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 30">
+    <a ui-sref="index" class="logo" href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 30">
     <defs>
         <style>.a, .b, .c-l, .d {
             fill: none;
@@ -3568,7 +3696,7 @@ button.c2157 svg {
 </svg>
 
     </a>
-    <a href="https://kliendk.com" class="author-logo" target="_blank">
+    <a href="https://desainkreasi.com" class="author-logo" target="_blank">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 52 40">
     <defs>
         <style>.a, .c {
@@ -4101,7 +4229,7 @@ button.c2157 svg {
     </a>
   </div>
   <div class="block purple-bg tariff-block">
-    <a ui-sref="" ng-click="main.toggleFourBlocksSection()" href="/connect">
+    <a ui-sref="connect" ng-click="main.toggleFourBlocksSection()" href="/connect">
       <img class="hero-2" src="hero-2.png" alt="">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" class="fig fig-yellow fig-square-big">
         <defs>
@@ -4238,7 +4366,7 @@ button.c2157 svg {
 
 </div>
     
-    
+    </div>
     <noscript><iframe src="index_1.html" style="display: none; visibility: hidden" width="0" height="0"></iframe></noscript>
   
   <script>

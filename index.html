@@ -10,6 +10,8 @@
     <base>
     <link href="favicon.png" rel="icon" type="image/png">
     <link href="style.css" rel="stylesheet">
+	<script src="main.js"></script>
+	<script src="robot-animations.js"></script>
   <style>
   body,html {
     background-color: rgb(171, 22, 94);
@@ -3125,7 +3127,8 @@ button.c2157 svg {
   font-weight: 400;
 }
 </style></head>
-  <body ng-controller="MainCtrl as main" ng-class="[$state.current.data.bodyClassName, main.bodyClassNames.join(' '), {'show-four-blocks-section': main.showFourBlocksSection, 'show-login-popup': main.showLogin, 'show-hamburger': main.showHamburger, 'show-connect-form': showConnectForm}]" class="ng-scope homepage-body loaded initial-animation">
+
+<body ng-controller="MainCtrl as main" ng-class="[$state.current.data.bodyClassName, main.bodyClassNames.join(' '), {'show-four-blocks-section': main.showFourBlocksSection, 'show-login-popup': main.showLogin, 'show-hamburger': main.showHamburger, 'show-connect-form': showConnectForm}]" class="ng-scope homepage-body loaded initial-animation" style="">
     <!-- uiView: --><div class="inner-page-wrap ng-scope" ui-view=""><div class="fullpage-wrap ng-scope">
 	<div id="particles-snow">
     <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
@@ -3244,9 +3247,6 @@ particlesJS("particles-snow", {
 //# sourceURL=pen.js
     </script><canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="1920" height="191"></canvas>
 </div>
-	
-	
-	
   <header class="header">
   <div class="wrapper">
     <a ui-sref="index" class="logo" href="">
@@ -3316,106 +3316,29 @@ particlesJS("particles-snow", {
         </li>
       </ul>
     </nav>
-    <a href="https://desainkreasi.com" class="personal-area" title="Jasa Website Bandung"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42 42">
-    <defs>
-        <style>.a-login {
-            fill: none;
-        }
 
-        .b-login {
-            clip-path: url("#a-login");
-        }
+<div id="menu">
+  <div id="menu-bar" onclick="menuOnClick()">
+    <div id="bar1" class="bar"></div>
+    <div id="bar2" class="bar"></div>
+    <div id="bar3" class="bar"></div>
+  </div>
+  <nav class="nav" id="nav">
+    <ul>
+      <li><a href="https://yuri2908.github.io/ty/">Home</a></li>
+      <li><a href="https://yuri2908.github.io/portfolio/">Portfolio</a></li>
+      <li><a href="https://yuri2908.github.io/connect/">Connect</a></li>
+      <li><a href="https://desainkreasi.com/blog/">Blog</a></li>
+    </ul>
+  </nav> 
+</div>
 
-        .c-login {
-            fill: #8f00ff;
-            fill-rule: evenodd;
-        }</style>
-        <clipPath id="a-login" transform="translate(0 0)">
-            <rect class="a-login" width="42" height="42"></rect>
-        </clipPath>
-    </defs>
-    <g class="b-login">
-        <path class="c-login" d="M21,0A21,21,0,1,0,42,21,21,21,0,0,0,21,0M15,30l4.18-8.35a5,5,0,1,1,3.64,0L27,30H15Z" transform="translate(0 0)"></path>
-    </g>
-</svg>
-</a>
+<div class="menu-bg" id="menu-bg"></div>
     <!-- ng-click="main.toggleLogin()" -->
   </div>
 </header>
 
-  <header class="mobile-header" headroom="" scroller=".main-menu-item">
-  <div class="wrapper">
-    <a ui-sref="index" class="logo" href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 30">
-    <defs>
-        <style>.a, .b, .c-l, .d {
-            fill: none;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            stroke-width: 10px;
-        }
 
-        .a {
-            stroke: #ffb103;
-        }
-
-        .b {
-            stroke: #8f00ff;
-        }
-
-        .c-l {
-            stroke: #4fed00;
-        }
-
-        .d {
-            stroke: #11f5ff;
-        }</style>
-    </defs>
-    <line class="a" x1="15" y1="5" x2="15" y2="25"></line>
-    <line class="a" x1="25" y1="15" x2="5" y2="15"></line>
-    <circle class="b" cx="51" cy="15" r="10"></circle>
-    <line class="c-l" x1="87" y1="5" x2="87" y2="25"></line>
-    <line class="c-l" x1="97" y1="15" x2="77" y2="15"></line>
-    <rect class="d" x="113" y="5" width="20" height="20"></rect>
-</svg>
-</a>
-    <span class="hamburger-menu-mobile" ng-click="main.toggleHamburger()">
-      <svg xmlns="http://www.w3.org/2000/svg" class="hamburger-menu-icon" xmlns:xlink="http://www.w3.org/1999/xlink" width="42" height="42" viewBox="0 0 42 42">
-  <defs>
-    <style>
-      .cls-hamburger {
-          fill: #545454;
-      }
-    </style>
-    <filter id="filter" filterUnits="userSpaceOnUse">
-      <feFlood result="flood" flood-color="#8f00ff"></feFlood>
-      <feComposite result="composite" operator="in" in2="SourceGraphic"></feComposite>
-      <feBlend result="blend" in2="SourceGraphic"></feBlend>
-    </filter>
-  </defs>
-  <g id="B" class="cls-1">
-    <rect id="B-2" data-name="B" class="cls-hamburger" y="36" width="42" height="6" rx="3" ry="3"></rect>
-    <rect id="B-3" data-name="B" class="cls-hamburger" y="18" width="42" height="6" rx="3" ry="3"></rect>
-    <rect id="B-4" data-name="B" class="cls-hamburger" width="42" height="6" rx="3" ry="3"></rect>
-  </g>
-</svg>
-
-      <span class="close-icon-wrap">Закрыть <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
-    <defs>
-        <style>.cross-close {
-            fill: none;
-            stroke: #11f5ff;
-            stroke-linecap: round;
-            stroke-miterlimit: 22.93;
-            stroke-width: 4px;
-        }</style>
-    </defs>
-    <line class="cross-close" x1="28" y1="2" x2="2" y2="28"></line>
-    <line class="cross-close" x1="28" y1="28" x2="2" y2="2"></line>
-</svg>
-</span>
-    </span>
-  </div>
-</header>
 
   <!-- uiView: --><main ng-class="[$state.current.data.mainClassName]" ui-view="" class="ng-scope homepage"><slick infinite="false" arrows="false" responsive="[{breakpoint: 2000, settings: 'unslick'}, {breakpoint: 767}]" class="slick-example ng-scope ng-isolate-scope"><div>
       <img src="hero.png" alt="" class="hero hero2">
@@ -3731,7 +3654,7 @@ particlesJS("particles-snow", {
 </div>
 
 <div class="slide-menu ng-scope">
-    <section class="menu-container @if(page === 'cabinet' || page === 'cabinet-block'){show-cabinet-menu}">
+    <section class="menu-container">
   <div class="wrapper">
     <a ui-sref="index" class="logo" href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 30">
     <defs>
@@ -3769,50 +3692,17 @@ particlesJS("particles-snow", {
     <nav class="slide-menu-nav">
       <ul>
         <li>
-          <a ui-sref="index" ng-class="{active: $state.includes('index')}" href="" class="active">Главная</a>
+          <a ng-class="{active: $state.includes('index')}" href="https://yuri2908.github.io/ty/" class="active">Home</a>
         </li>
         <li>
-          <a ui-sref="main.about-plan" ui-sref-opts="{reload: true}" ng-class="{active: $state.includes('main.about-plan')}" href="/about-plan">Тариф</a>
+          <a href="https://yuri2908.github.io/portfolio/">Portfolio</a>
         </li>
         <li>
-          <a ui-sref="main.request" ui-sref-opts="{reload: true}" ng-class="{active: $state.includes('main.request')}" href="/request">Заявка</a>
+          <a href="https://yuri2908.github.io/connect/">Connect</a>
         </li>
         <li>
-          <a ui-sref="main.b2b" ui-sref-opts="{reload: true}" ng-class="{active: $state.includes('main.b2b')}" href="/b2b">Бизнес</a>
+          <a href="https://wa.me/6289605552515">Whatsapp</a>
         </li>
-        <li>
-          <a ui-sref="main.articles({tag: null})" ui-sref-opts="{reload: true}" ng-class="{active: $state.includes('main.articles')}" href="/articles">Новости</a>
-        </li>
-
-        <li>
-          <a ui-sref="main.help" ui-sref-opts="{reload: true}" ng-class="{active: $state.includes('main.help')}" href="/help">Помощь</a>
-        </li>
-        <li><a ui-sref="main.payment" ui-sref-opts="{reload: true}" ng-class="{active: $state.includes('main.payment')}" href="/payment">Оплата</a></li>
-      </ul>
-      <ul>
-        <li>
-          <a href="https://lk.teleset.plus/" class="a-green">Кабинет</a>
-        </li>
-        <li>
-          <a href="https://lk.teleset.plus/cameras" class="a-green">Камеры</a>
-        </li>
-        <li>
-          <a ui-sref="main.channels" ui-sref-opts="{reload: true}" ng-class="{active: $state.includes('main.channels')}" href="/channels">Каналы</a>
-        </li>
-        <li>
-          <a ui-sref="main.shop" ui-sref-opts="{reload: true}" ng-class="{active: $state.includes('main.shop')}" href="/shop">Магазин</a>
-        </li>
-        <li>
-          <a ui-sref="main.docs" ui-sref-opts="{reload: true}" ng-class="{active: $state.includes('main.docs')}" href="/docs">Документы</a>
-        </li>
-        <!-- <li><a href="#" class="disabled">Опросы</a></li> -->
-        <li>
-          <a ui-sref="main.faq" ui-sref-opts="{reload: true}" ng-class="{active: $state.includes('main.faq')}" href="/faq">FAQ</a>
-        </li>
-        <li>
-          <a ui-sref="main.contacts" ui-sref-opts="{reload: true}" ng-class="{active: $state.includes('main.contacts')}" href="/contacts">О компании</a>
-        </li>
-        <!-- <li><a ui-sref="main.nikola2019" ui-sref-opts="{reload: true}" ng-class="{active: $state.includes('main.nikola2019')}">Николов Перевоз 2019</a></li> -->
       </ul>
     </nav>
     <nav class="cabinet-nav">
@@ -3846,8 +3736,8 @@ particlesJS("particles-snow", {
     <line class="cross-close" x1="28" y1="2" x2="2" y2="28"></line>
     <line class="cross-close" x1="28" y1="28" x2="2" y2="2"></line>
 </svg>
-<span class="text">Выход</span></a>
-        <a ng-href="tel:+79691920208" class="make-call" href="tel:+79691920208">
+<span class="text">Contact Us</span></a>
+        <a ng-href="https://wa.me/6289605552515" class="make-call" href="https://wa.me/6289605552515">
           <div class="phone-tooltip ng-binding" ng-bind="settings.phone.value">0896 0555 2515</div>
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42 42">
     <defs>
@@ -3890,19 +3780,16 @@ particlesJS("particles-snow", {
 
     <ul class="social-icons">
       <li>
-        <a href="https://www.facebook.com/teleset.plus" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283.46 283.46"><title>White</title><g id="Слой_2" data-name="Слой 2"><g id="White"><path id="White-2" data-name="White" d="M267.82,0H15.65A15.64,15.64,0,0,0,0,15.65V267.82a15.64,15.64,0,0,0,15.65,15.65H151.41V173.69H114.47V130.91h36.94V99.36c0-36.61,22.36-56.55,55-56.55a303.09,303.09,0,0,1,33,1.69V82.76H216.79c-17.76,0-21.2,8.44-21.2,20.83v27.31h42.36l-5.52,42.78H195.59V283.46h72.23a15.65,15.65,0,0,0,15.65-15.65V15.65A15.64,15.64,0,0,0,267.82,0Z"></path></g></g></svg></a>
+        <a href="https://www.facebook.com/desainkreasi/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283.46 283.46"><title>White</title><g id="Слой_2" data-name="Слой 2"><g id="White"><path id="White-2" data-name="White" d="M267.82,0H15.65A15.64,15.64,0,0,0,0,15.65V267.82a15.64,15.64,0,0,0,15.65,15.65H151.41V173.69H114.47V130.91h36.94V99.36c0-36.61,22.36-56.55,55-56.55a303.09,303.09,0,0,1,33,1.69V82.76H216.79c-17.76,0-21.2,8.44-21.2,20.83v27.31h42.36l-5.52,42.78H195.59V283.46h72.23a15.65,15.65,0,0,0,15.65-15.65V15.65A15.64,15.64,0,0,0,267.82,0Z"></path></g></g></svg></a>
       </li>
       <li>
-        <a href="https://vk.com/teleset.plus" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283.46 165.97"><title>5Ресурс 2</title><g id="Слой_2" data-name="Слой 2"><g id="White"><path d="M235.48,81.38s37.35-52.69,41.06-70c1.24-6.18-1.48-9.65-7.92-9.65h-32.4c-7.42,0-10.14,3.22-12.37,7.92,0,0-17.52,37.33-38.83,60.85-6.84,7.6-10.32,9.89-14.1,9.89-3,0-4.45-2.54-4.45-9.4V10.88c0-8.41-1-10.88-7.91-10.88H106.61c-4,0-6.43,2.3-6.43,5.44,0,7.92,12.12,9.71,12.12,31.17V80.88c0,8.9-.49,12.37-4.7,12.37-11.13,0-37.6-38.34-52.44-81.87C52.19,2.47,49,0,40.57,0H8.16C3.46,0,0,3.21,0,7.91c0,8.66,10.14,48.73,50,102.4C76.68,146.43,111.8,166,143.46,166c19.29,0,24-3.21,24-11.38v-27.7c0-6.93,2.72-9.89,6.68-9.89,4.45,0,12.31,1.43,30.67,19.54C226.57,157.32,228.06,166,239.93,166h36.36c3.71,0,7.17-1.73,7.17-7.92,0-8.16-10.64-22.76-27-40.07-6.68-8.9-17.56-18.55-21-23C230.53,89.79,232,86.82,235.48,81.38Z"></path></g></g></svg></a>
-      </li>
-      <li>
-        <a href="https://www.youtube.com/channel/UCu5D47Lm4EsjMn14qMc5lUA" target="_blank"><svg viewBox="0 -62 512.00199 512" xmlns="http://www.w3.org/2000/svg">
+        <a href="https://www.youtube.com/channel/UCAWsxkQdMK3vbJDu-2QUdzQ" target="_blank"><svg viewBox="0 -62 512.00199 512" xmlns="http://www.w3.org/2000/svg">
     <path d="m334.808594 170.992188-113.113282-61.890626c-6.503906-3.558593-14.191406-3.425781-20.566406.351563-6.378906 3.78125-10.183594 10.460937-10.183594 17.875v122.71875c0 7.378906 3.78125 14.046875 10.117188 17.832031 3.308594 1.976563 6.976562 2.96875 10.652344 2.96875 3.367187 0 6.742187-.832031 9.847656-2.503906l113.117188-60.824219c6.714843-3.613281 10.90625-10.59375 10.9375-18.222656.027343-7.628906-4.113282-14.640625-10.808594-18.304687zm-113.859375 63.617187v-91.71875l84.539062 46.257813zm0 0"></path><path d="m508.234375 91.527344-.023437-.234375c-.433594-4.121094-4.75-40.777344-22.570313-59.421875-20.597656-21.929688-43.949219-24.59375-55.179687-25.871094-.929688-.105469-1.78125-.203125-2.542969-.304688l-.894531-.09375c-67.6875-4.921874-169.910157-5.5937495-170.933594-5.59765575l-.089844-.00390625-.089844.00390625c-1.023437.00390625-103.246094.67578175-171.542968 5.59765575l-.902344.09375c-.726563.097657-1.527344.1875-2.398438.289063-11.101562 1.28125-34.203125 3.949219-54.859375 26.671875-16.972656 18.445312-21.878906 54.316406-22.382812 58.347656l-.058594.523438c-.152344 1.714844-3.765625 42.539062-3.765625 83.523437v38.3125c0 40.984375 3.613281 81.808594 3.765625 83.527344l.027344.257813c.433593 4.054687 4.746093 40.039062 22.484375 58.691406 19.367187 21.195312 43.855468 24 57.027344 25.507812 2.082031.238282 3.875.441406 5.097656.65625l1.183594.164063c39.082031 3.71875 161.617187 5.550781 166.8125 5.625l.15625.003906.15625-.003906c1.023437-.003907 103.242187-.675781 170.929687-5.597657l.894531-.09375c.855469-.113281 1.816406-.214843 2.871094-.324218 11.039062-1.171875 34.015625-3.605469 54.386719-26.019532 16.972656-18.449218 21.882812-54.320312 22.382812-58.347656l.058594-.523437c.152344-1.71875 3.769531-42.539063 3.769531-83.523438v-38.3125c-.003906-40.984375-3.617187-81.804687-3.769531-83.523437zm-26.238281 121.835937c0 37.933594-3.3125 77-3.625 80.585938-1.273438 9.878906-6.449219 32.574219-14.71875 41.5625-12.75 14.027343-25.847656 15.417969-35.410156 16.429687-1.15625.121094-2.226563.238282-3.195313.359375-65.46875 4.734375-163.832031 5.460938-168.363281 5.488281-5.082032-.074218-125.824219-1.921874-163.714844-5.441406-1.941406-.316406-4.039062-.558594-6.25-.808594-11.214844-1.285156-26.566406-3.042968-38.371094-16.027343l-.277344-.296875c-8.125-8.464844-13.152343-29.6875-14.429687-41.148438-.238281-2.710937-3.636719-42.238281-3.636719-80.703125v-38.3125c0-37.890625 3.304688-76.914062 3.625-80.574219 1.519532-11.636718 6.792969-32.957031 14.71875-41.574218 13.140625-14.453125 26.996094-16.054688 36.160156-17.113282.875-.101562 1.691407-.195312 2.445313-.292968 66.421875-4.757813 165.492187-5.464844 169.046875-5.492188 3.554688.023438 102.589844.734375 168.421875 5.492188.808594.101562 1.691406.203125 2.640625.3125 9.425781 1.074218 23.671875 2.699218 36.746094 16.644531l.121094.128906c8.125 8.464844 13.152343 30.058594 14.429687 41.75.226563 2.558594 3.636719 42.171875 3.636719 80.71875zm0 0"></path>
 </svg>
 </a>
       </li>
       <li>
-        <a href="https://www.instagram.com/teleset.dubna/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21"><defs><style>.cls-13{fill:#fff;}</style></defs><title>Ресурс 122</title>
+        <a href="https://www.instagram.com/desainkreasi/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21"><defs><style>.cls-13{fill:#fff;}</style></defs><title>Desain Kreasi</title>
 <g id="Слой_2" data-name="Слой 2">
   <g id="Слой_1-2" data-name="Слой 1">
     <path class="cls-13" d="M21,10.76v-.52c0-2.61,0-3-.06-4.07a7.71,7.71,0,0,0-.49-2.55,5.15,5.15,0,0,0-1.21-1.86A5.15,5.15,0,0,0,17.38.55,7.71,7.71,0,0,0,14.83.06C13.74,0,13.38,0,10.76,0h-.52c-2.61,0-3,0-4.07.06A7.71,7.71,0,0,0,3.62.55,5.15,5.15,0,0,0,1.76,1.76,5.15,5.15,0,0,0,.55,3.62,7.71,7.71,0,0,0,.06,6.17C0,7.29,0,7.65,0,10.5s0,3.21.06,4.33a7.71,7.71,0,0,0,.49,2.55,5.16,5.16,0,0,0,1.21,1.86,5.16,5.16,0,0,0,1.86,1.21,7.71,7.71,0,0,0,2.55.49C7.29,21,7.65,21,10.5,21s3.21,0,4.33-.06a7.71,7.71,0,0,0,2.55-.49,5.37,5.37,0,0,0,3.07-3.07,7.71,7.71,0,0,0,.49-2.55c0-1.09.06-1.45.06-4.07M10.5,1.89c2.8,0,3.14,0,4.24.06a5.81,5.81,0,0,1,2,.36,3.26,3.26,0,0,1,1.21.79,3.25,3.25,0,0,1,.79,1.21,5.81,5.81,0,0,1,.36,2c.05,1.11.06,1.44.06,4.24s0,3.14-.06,4.24a5.81,5.81,0,0,1-.36,1.95,3.48,3.48,0,0,1-2,2,5.81,5.81,0,0,1-2,.36c-1.11.05-1.44.06-4.24.06s-3.14,0-4.24-.06a5.81,5.81,0,0,1-1.95-.36A3.25,3.25,0,0,1,3.1,17.9a3.25,3.25,0,0,1-.79-1.21A5.81,5.81,0,0,1,2,14.74c-.05-1.11-.06-1.44-.06-4.24s0-3.14.06-4.24a5.81,5.81,0,0,1,.36-2A3.26,3.26,0,0,1,3.1,3.1a3.26,3.26,0,0,1,1.21-.79A5.81,5.81,0,0,1,6.26,2C7.36,1.9,7.7,1.89,10.5,1.89Z"></path>
@@ -3930,10 +3817,10 @@ particlesJS("particles-snow", {
     <line class="cross-close" x1="28" y1="28" x2="2" y2="2"></line>
 </svg>
 
-        <span class="text">Закрыть</span>
+        <span class="text">Close</span>
       </a>
-      <a ng-href="tel:+79691920208" class="make-call" href="tel:+79691920208">
-        <div class="phone-tooltip ng-binding" ng-bind="settings.phone.value">969 192 02 08</div>
+      <a ng-href="https://wa.me/6289605552515" class="make-call" href="https://wa.me/6289605552515">
+        <div class="phone-tooltip ng-binding" ng-bind="settings.phone.value">Contact Us</div>
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42 42">
     <defs>
         <style>.a-make-call {
@@ -4378,5 +4265,12 @@ var scroll = $(window).scrollTop();
     audioElm.volume = 1 - $(window).scrollTop()/height;
     console.log(audioElm.volume);
 });
+</script>
+<script>
+function menuOnClick() {
+  document.getElementById("menu-bar").classList.toggle("change");
+  document.getElementById("nav").classList.toggle("change");
+  document.getElementById("menu-bg").classList.toggle("change-bg");
+}
 </script>
 </body></html>

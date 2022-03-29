@@ -13,6 +13,17 @@
 	<script src="main.js"></script>
 	<script src="robot-animations.js"></script>
   <style>
+    #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+.fullpage-wrap {
+  background: rgba(0, 0, 0, 0.2);
+}
+
   body,html {
     background-color: rgb(171, 22, 94);
 		margin: 0 0 0 0;
@@ -3129,7 +3140,11 @@ button.c2157 svg {
 </style></head>
 
 <body ng-controller="MainCtrl as main" ng-class="[$state.current.data.bodyClassName, main.bodyClassNames.join(' '), {'show-four-blocks-section': main.showFourBlocksSection, 'show-login-popup': main.showLogin, 'show-hamburger': main.showHamburger, 'show-connect-form': showConnectForm}]" class="ng-scope homepage-body loaded initial-animation" style="">
-    <!-- uiView: --><div class="inner-page-wrap ng-scope" ui-view=""><div class="fullpage-wrap ng-scope">
+    <!-- uiView: -->
+		<video autoplay muted loop id="myVideo">
+  <source src="racing.mp4" type="video/mp4">
+</video>
+	<div class="inner-page-wrap ng-scope" ui-view=""><div class="fullpage-wrap ng-scope">
 	<div id="particles-snow">
     <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
 
@@ -3287,7 +3302,7 @@ particlesJS("particles-snow", {
     <nav class="main-navigation">
       <ul>
         <li>
-          <a class="active" ui-sref="index" ui-sref-opts="{reload: true}" ng-class="{active: $state.includes('index')}" href="https://yuri2908.github.io/ty/">Home</a>
+          <a class="active" ui-sref="index" ui-sref-opts="{reload: true}" ng-class="{active: $state.includes('index')}" href="https://yuri2908.github.io/">Home</a>
         </li>
         <li>
           <a ui-sref="connect" ui-sref-opts="{reload: true}" ng-class="{active: $state.includes('connect')}" href="https://yuri2908.github.io/portfolio/">Portfolio</a>
@@ -3312,7 +3327,7 @@ particlesJS("particles-snow", {
           <a ui-sref="payment({status: undefined})" ui-sref-opts="{reload: true}" ng-class="{active: $state.includes('payment')}" href="https://yuri2908.github.io/connect/">Connect</a>
         </li>
         <li>
-          <a href="https://wa.me/6289605552515" target="lkteleset">Whatsapp</a>
+          <a href="https://yuri2908.github.io/ty/" target="lkteleset">이태용</a>
         </li>
       </ul>
     </nav>
@@ -3329,7 +3344,7 @@ particlesJS("particles-snow", {
       <li><a href="https://yuri2908.github.io/portfolio/">Portfolio</a></li>
       <li><a href="https://yuri2908.github.io/connect/">Connect</a></li>
       <li><a href="https://yuri2908.github.io/ty/">이태용</a></li>
-	  <li><a href="https://yuri2908.github.io/pixel">Pixel</a></li>
+	  <li><a href="https://yuri2908.github.io/pixel/">Pixel</a></li>
 	  <li><a href="https://yuri2908.github.io/yuri5/">Yuri 5</a></li>
 	  <li><a href="https://yuri2908.github.io/desainkreasi/">Desain Kreasi</a></li>
 	  <li><a href="https://desainkreasi.com/blog/">Blog</a></li>
@@ -3546,7 +3561,7 @@ particlesJS("particles-snow", {
 </svg>
 
     </div>
-    <a href="https://yuri2908.github.io/ty/" class="hamburger-menu" ng-click="main.toggleMenu()">
+    <a href="https://yuri2908.github.io/" class="hamburger-menu" ng-click="main.toggleMenu()">
       <span class="hamburger-button"><svg xmlns="http://www.w3.org/2000/svg" class="hamburger-menu-icon" xmlns:xlink="http://www.w3.org/1999/xlink" width="42" height="42" viewBox="0 0 42 42">
   <defs>
     <style>
@@ -3696,7 +3711,7 @@ particlesJS("particles-snow", {
     <nav class="slide-menu-nav">
       <ul>
         <li>
-          <a ng-class="{active: $state.includes('index')}" href="https://yuri2908.github.io/ty/" class="active">Home</a>
+          <a ng-class="{active: $state.includes('index')}" href="https://yuri2908.github.io/" class="active">Home</a>
         </li>
         <li>
           <a href="https://yuri2908.github.io/portfolio/">Portfolio</a>
@@ -4258,8 +4273,24 @@ particlesJS("particles-snow", {
 </div>
     
     </div>
-    <noscript><iframe src="index_1.html" style="display: none; visibility: hidden" width="0" height="0"></iframe></noscript>
-  
+<script>
+// Get the video
+var video = document.getElementById("myVideo");
+
+// Get the button
+var btn = document.getElementById("myBtn");
+
+// Pause and play the video, and change the button text
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>  
   <script>
 $(window).scroll(function() {
     var height = $(document).height() - $(window).height();

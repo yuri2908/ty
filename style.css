@@ -6906,7 +6906,10 @@ header.mobile-header .hamburger-menu-mobile svg.hamburger-menu-icon rect {
 }
 .homepage-body .footer-landing .author-logo,
 .homepage-inner .footer-landing .author-logo {
-    color: rgba(43, 44, 52, 0.6);
+    color: #fff;
+	background: #0c194a;
+    padding: 15px 15px 0px 15px;
+    border-radius: 35px;
 }
 .homepage-body .footer-landing .author-logo .opacity-60,
 .homepage-inner .footer-landing .author-logo .opacity-60 {

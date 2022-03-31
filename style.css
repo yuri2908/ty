@@ -12738,7 +12738,7 @@ input[type="checkbox"].checkbox-ui:checked + label:before {
     }
 }
 .footer-landing .author-logo {
-    margin-right: 6vw;
+    margin-right: 2vw;
 }
 .payment-form a {
     color: #8f00ff;
